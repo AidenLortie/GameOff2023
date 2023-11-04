@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvso3dk6svbxg"]
+[gd_scene load_steps=6 format=3 uid="uid://cvso3dk6svbxg"]
 
 [ext_resource type="Texture2D" uid="uid://be8ghsxjmyhb7" path="res://Assets/Sprites/walls_tile_set.png" id="1_hw8rc"]
 [ext_resource type="PackedScene" uid="uid://cq74stbk6gnmo" path="res://Scenes/Entities/Player.tscn" id="2_se52m"]
+[ext_resource type="PackedScene" uid="uid://clswgsxb4t2jd" path="res://Scenes/Entities/Enemy_1.tscn" id="3_e2mfg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wej38"]
 resource_name = "walls and ground"
@@ -56,3 +57,12 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 65536, 
 [node name="Player" parent="." instance=ExtResource("2_se52m")]
 position = Vector2(65, 59)
 scale = Vector2(2, 2)
+
+[node name="Enemy_1" parent="." instance=ExtResource("3_e2mfg")]
+position = Vector2(14, 543)
+
+[node name="Enemy_2" parent="." instance=ExtResource("3_e2mfg")]
+position = Vector2(903, 557)
+
+[node name="Enemy_3" parent="." instance=ExtResource("3_e2mfg")]
+position = Vector2(442, 831)

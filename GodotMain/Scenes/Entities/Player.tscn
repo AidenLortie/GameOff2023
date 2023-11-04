@@ -183,11 +183,11 @@ animation = &"WALK_RIGHT"
 blend_point_0/node = SubResource("AnimationNodeAnimation_nyyxp")
 blend_point_0/pos = Vector2(0, 1)
 blend_point_1/node = SubResource("AnimationNodeAnimation_qxjiu")
-blend_point_1/pos = Vector2(0, -1.01)
+blend_point_1/pos = Vector2(0, -1)
 blend_point_2/node = SubResource("AnimationNodeAnimation_5g4n3")
-blend_point_2/pos = Vector2(-1, -0.01)
+blend_point_2/pos = Vector2(-1.01, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_j7kqe")
-blend_point_3/pos = Vector2(1, -0.01)
+blend_point_3/pos = Vector2(1.01, 0)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6dqm0"]
@@ -206,11 +206,11 @@ animation = &"IDLE_LEFT"
 blend_point_0/node = SubResource("AnimationNodeAnimation_6dqm0")
 blend_point_0/pos = Vector2(0, 1)
 blend_point_1/node = SubResource("AnimationNodeAnimation_6ihl7")
-blend_point_1/pos = Vector2(0, -1.01)
+blend_point_1/pos = Vector2(0, -1)
 blend_point_2/node = SubResource("AnimationNodeAnimation_b37f2")
-blend_point_2/pos = Vector2(1.01, 0)
+blend_point_2/pos = Vector2(1.1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_04xpq")
-blend_point_3/pos = Vector2(-1.01, 0)
+blend_point_3/pos = Vector2(-1.1, 0)
 min_space = Vector2(-1.06, -1)
 max_space = Vector2(1.04, 1)
 blend_mode = 1
@@ -220,10 +220,13 @@ radius = 1.0
 height = 8.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+safe_margin = 8.0
 script = ExtResource("1_2ukua")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, -7)
 texture = ExtResource("2_ompqt")
 hframes = 3
 vframes = 4
@@ -242,11 +245,11 @@ parameters/blend_position = Vector2(0, 0)
 tree_root = SubResource("AnimationNodeBlendSpace2D_ktgop")
 anim_player = NodePath("..")
 active = true
-parameters/blend_position = Vector2(0, 0)
+parameters/blend_position = Vector2(-0.00465202, 0.0393014)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_xvh3x")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -7)
