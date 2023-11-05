@@ -6,6 +6,8 @@ const SPEED = 100.0
 @onready var walkAnim = $"Sprite2D/AnimationPlayer/WalkAnimTree"
 @onready var idleAnim = $"Sprite2D/AnimationPlayer/IdleAnimTree"
 
+@export var playerHealth = 100
+
 func _ready():
 	walkAnim.set("parameters/blend_position", [0,0])
 	idleAnim.set("parameters/blend_position", [0,0])
